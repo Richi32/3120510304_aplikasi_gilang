@@ -59,5 +59,5 @@ app.use(GetAllMateri);
 // store.sync(); //untuk membuat table session pada database
 
 app.listen(process.env.APP_PORT, ()=> {
-    console.log('Server berjalan di port 5000');
+    console.log('Server berjalan di port 49153');
 });
