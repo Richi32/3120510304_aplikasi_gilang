@@ -56,7 +56,7 @@ app.use(KataKerjaRoute);
 app.use(AuthRoute);
 app.use(AuthRoute2);
 app.use(GetAllMateri);
-// store.sync(); //untuk membuat table session pada database
+store.sync(); //untuk membuat table session pada database
 
 app.listen(process.env.APP_PORT, ()=> {
     console.log('Server berjalan di port 49153');
