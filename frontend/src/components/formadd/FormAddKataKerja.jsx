@@ -21,7 +21,7 @@ const FormAddKataKerja = () => {
                 confirmButtonText: 'Simpan',
               }).then((result) => {
                 if (result.isConfirmed) {
-                axios.post('http://localhost:5000/katakerja',{
+                axios.post('http://localhost:49153/katakerja',{
                 kanji: kanji,
                 romaji: romaji,
                 arti: arti

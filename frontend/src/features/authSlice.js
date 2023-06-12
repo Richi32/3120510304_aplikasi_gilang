@@ -12,7 +12,7 @@ const initialState = {
 
 export const LoginUser = createAsyncThunk("User/LoginUser", async(user, thunkAPI) =>{
     try {
-        const response = await axios.post('http://localhost:5000/login', {
+        const response = await axios.post('http://localhost:49153/login', {
             email: user.email,
             password: user.password
         });
@@ -27,7 +27,7 @@ export const LoginUser = createAsyncThunk("User/LoginUser", async(user, thunkAPI
 
 export const getMe = createAsyncThunk("User/getMe", async(_, thunkAPI) =>{
     try {
-        const response = await axios.get('http://localhost:5000/me');
+        const response = await axios.get('http://localhost:49153/me');
         return response.data;
     } catch (error) {
         if(error.response){
@@ -39,7 +39,7 @@ export const getMe = createAsyncThunk("User/getMe", async(_, thunkAPI) =>{
 
 export const LoginPesertaMagang = createAsyncThunk("PesertaMagang/LoginPesertaMagang", async(pesertamagang, thunkAPI) =>{
     try {
-        const response = await axios.post('http://localhost:5000/login2', {
+        const response = await axios.post('http://localhost:49153/login2', {
             email: pesertamagang.email,
             password: pesertamagang.password
         });
@@ -54,7 +54,7 @@ export const LoginPesertaMagang = createAsyncThunk("PesertaMagang/LoginPesertaMa
 
 export const getMe2 = createAsyncThunk("PesertaMagang/getMe2", async(_, thunkAPI) => {
     try {
-        const response = await axios.get('http://localhost:5000/me2');
+        const response = await axios.get('http://localhost:49153/me2');
         return response.data;
     } catch (error) {
         if(error.response){
@@ -65,7 +65,7 @@ export const getMe2 = createAsyncThunk("PesertaMagang/getMe2", async(_, thunkAPI
 });
 
 export const LogOut = createAsyncThunk("User/LogOut", async() =>{
-    await axios.delete('http://localhost:5000/logout');
+    await axios.delete('http://localhost:49153/logout');
 })
 
 export const authSlice = createSlice({

@@ -19,7 +19,7 @@ const KataBenda = () => {
  
   const getKataBenda = async () => {
     const response = await axios.get(
-      `http://localhost:5000/getkatabenda?search_query=${keyword}&page=${page}&limit=${limit}`
+      `http://localhost:49153/getkatabenda?search_query=${keyword}&page=${page}&limit=${limit}`
     );
     setKataBenda(response.data.result);
     setPage(response.data.page);
@@ -50,7 +50,7 @@ const KataBenda = () => {
     // },[]);
 
     // const getKataBenda =  async() => {
-    //     const response = await axios.get('http://localhost:5000/getkatabenda');
+    //     const response = await axios.get('http://localhost:49153/getkatabenda');
     //     setKataBenda(response.data)
     // }
 

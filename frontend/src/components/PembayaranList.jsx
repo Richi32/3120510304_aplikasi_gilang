@@ -15,7 +15,7 @@ const PembayaranList = () => {
     },[]);
 
     const getPembayaran = async() => {
-        const response = await axios.get('http://localhost:5000/pembayaran');
+        const response = await axios.get('http://localhost:49153/pembayaran');
         setPembayaran(response.data)
     }
 
@@ -30,7 +30,7 @@ const PembayaranList = () => {
             confirmButtonText: 'Ya, Hapus!'
           }).then((result) => {
             if (result.isConfirmed) {
-            axios.delete(`http://localhost:5000/pembayaran/${PembayaranId}`);
+            axios.delete(`http://localhost:49153/pembayaran/${PembayaranId}`);
               MySwal.fire(
                 'Dihapus!',
                 'Data Berhasil dihapus!'

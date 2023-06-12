@@ -24,7 +24,7 @@ const Kanjin5List = () => {
      
       const getKanjin5 = async () => {
         const response = await axios.get(
-          `http://localhost:5000/kanjin5?search_query=${keyword}&page=${page}&limit=${limit}`
+          `http://localhost:49153/kanjin5?search_query=${keyword}&page=${page}&limit=${limit}`
         );
         setKanjin5(response.data.result);
         setPage(response.data.page);
@@ -43,7 +43,7 @@ const Kanjin5List = () => {
             confirmButtonText: 'Ya, Hapus!'
           }).then((result) => {
             if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/kanjin5/${Kanjin5Id}`);
+        axios.delete(`http://localhost:49153/kanjin5/${Kanjin5Id}`);
         MySwal.fire(
             'Dihapus!',
             'Data Berhasil dihapus!'

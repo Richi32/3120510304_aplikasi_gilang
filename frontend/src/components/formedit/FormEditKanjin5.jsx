@@ -14,7 +14,7 @@ const FormEditKanjin5 = () => {
     useEffect(()=>{
         const getKanjin5ById = async() => {
             try {
-                const response = await axios.get(`http://localhost:5000/kanjin5/${id}`);
+                const response = await axios.get(`http://localhost:49153/kanjin5/${id}`);
                 setKanji(response.data.kanji)
                 setOnyomi(response.data.onyomi);
                 setKunyomi(response.data.kunyomi);
@@ -31,7 +31,7 @@ const FormEditKanjin5 = () => {
     const updateKanjin5 = async(e) => {
         e.preventDefault();
         try {
-            await axios.patch(`http://localhost:5000/kanjin5/${id}`,{
+            await axios.patch(`http://localhost:49153/kanjin5/${id}`,{
                 kanji: kanji,
                 onyomi: onyomi,
                 kunyomi: kunyomi,

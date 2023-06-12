@@ -13,7 +13,7 @@ const FormEditPembayaran = () => {
     useEffect(()=>{
         const getPembayaranById = async() => {
             try {
-                const response = await axios.get(`http://localhost:5000/pembayaran/${id}`);
+                const response = await axios.get(`http://localhost:49153/pembayaran/${id}`);
                 setId(response.data.id)
                 setKeterangan(response.data.keterangan);
                 setBiaya(response.data.biaya)
@@ -29,7 +29,7 @@ const FormEditPembayaran = () => {
     const updatePembayaran = async(e) => {
         e.preventDefault();
         try {
-            await axios.patch(`http://localhost:5000/pembayaran/${id}`,{
+            await axios.patch(`http://localhost:49153/pembayaran/${id}`,{
                 pesertamagangId: idnama,
                 keterangan: keterangan,
                 biaya: biaya

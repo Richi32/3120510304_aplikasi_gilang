@@ -21,7 +21,7 @@ const FormAddKataBenda = () => {
                 confirmButtonText: 'Simpan',
               }).then((result) => {
                 if (result.isConfirmed) {
-                axios.post('http://localhost:5000/katabenda',{
+                axios.post('http://localhost:49153/katabenda',{
                 kanji: kanji,
                 romaji: romaji,
                 arti: arti

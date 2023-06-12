@@ -16,7 +16,7 @@ const FormEditHirakata = () => {
     useEffect(()=>{
         const getHirakataById = async() => {
             try {
-                const response = await axios.get(`http://localhost:5000/Hirakata/${id}`);
+                const response = await axios.get(`http://localhost:49153/Hirakata/${id}`);
                 setHiragana(response.data.hiragana)
                 setKatakana(response.data.katakana);
                 setRomaji(response.data.romaji)
@@ -32,7 +32,7 @@ const FormEditHirakata = () => {
     const updateHirakata = async(e) => {
         e.preventDefault();
         try {
-            await axios.patch(`http://localhost:5000/hirakata/${id}`,{
+            await axios.patch(`http://localhost:49153/hirakata/${id}`,{
                 hiragana: hiragana,
                 katakana: katakana,
                 romaji: romaji

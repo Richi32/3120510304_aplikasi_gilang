@@ -24,7 +24,7 @@ const FormAddPembayaran = () => {
               }).then((result) => {
                 /* Read more about isConfirmed, isDenied below */
                 if (result.isConfirmed) {
-                axios.post('http://localhost:5000/pembayaran',{
+                axios.post('http://localhost:49153/pembayaran',{
                     pesertamagangId: id,
                     keterangan: keterangan,
                     biaya: biaya
@@ -46,7 +46,7 @@ const FormAddPembayaran = () => {
     },[]);
 
     const getNama = async()=>{
-        const resnama = await axios.get(`http://localhost:5000/pesertamagang/${pesertamagangid}`);
+        const resnama = await axios.get(`http://localhost:49153/pesertamagang/${pesertamagangid}`);
         setNama(resnama.data);
     }
     

@@ -22,7 +22,7 @@ const FormAddKanjin5 = () => {
                 confirmButtonText: 'Simpan',
               }).then((result) => {
                 if (result.isConfirmed) {
-                axios.post('http://localhost:5000/kanjin5',{
+                axios.post('http://localhost:49153/kanjin5',{
                 kanji: kanji,
                 onyomi: onyomi,
                 kunyomi: kunyomi,

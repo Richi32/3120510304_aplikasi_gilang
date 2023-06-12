@@ -14,7 +14,7 @@ const UserList = () => {
     },[]);
 
     const getUsers = async() => {
-        const response = await axios.get('http://localhost:5000/users');
+        const response = await axios.get('http://localhost:49153/users');
         setUsers(response.data);
     }
 
@@ -29,7 +29,7 @@ const UserList = () => {
             confirmButtonText: 'Ya, Hapus!'
           }).then((result) => {
             if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/users/${Id}`);
+        axios.delete(`http://localhost:49153/users/${Id}`);
         MySwal.fire(
             'Dihapus!',
             'Data Berhasil dihapus!'

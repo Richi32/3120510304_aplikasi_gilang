@@ -14,7 +14,7 @@ const FormEditKataBenda = () => {
     useEffect(()=>{
         const getKataBendaById = async() => {
             try {
-                const response = await axios.get(`http://localhost:5000/KataBenda/${id}`);
+                const response = await axios.get(`http://localhost:49153/KataBenda/${id}`);
                 setKanji(response.data.kanji)
                 setRomaji(response.data.romaji);
                 setArti(response.data.arti);
@@ -30,7 +30,7 @@ const FormEditKataBenda = () => {
     const updateKataBenda = async(e) => {
         e.preventDefault();
         try {
-            await axios.patch(`http://localhost:5000/KataBenda/${id}`,{
+            await axios.patch(`http://localhost:49153/KataBenda/${id}`,{
                 kanji: kanji,
                 romaji:  romaji,
                 arti: arti

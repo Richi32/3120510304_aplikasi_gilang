@@ -24,7 +24,7 @@ const KataSifatList = () => {
 
     const getKataSifat =  async() => {
         const response = await axios.get(
-            `http://localhost:5000/katasifat?search_query=${keyword}&page=${page}&limit=${limit}`
+            `http://localhost:49153/katasifat?search_query=${keyword}&page=${page}&limit=${limit}`
         );
         setKataSifat(response.data.result);
         setPage(response.data.page);
@@ -43,7 +43,7 @@ const KataSifatList = () => {
             confirmButtonText: 'Ya, Hapus!'
           }).then((result) => {
             if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/katasifat/${KataSifatId}`);
+        axios.delete(`http://localhost:49153/katasifat/${KataSifatId}`);
         MySwal.fire(
             'Dihapus!',
             'Data Berhasil dihapus!'

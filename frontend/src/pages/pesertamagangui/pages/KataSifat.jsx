@@ -19,7 +19,7 @@ const KataSifat = () => {
  
   const getKataSifat = async () => {
     const response = await axios.get(
-      `http://localhost:5000/getkataSifat?search_query=${keyword}&page=${page}&limit=${limit}`
+      `http://localhost:49153/getkataSifat?search_query=${keyword}&page=${page}&limit=${limit}`
     );
     setKataSifat(response.data.result);
     setPage(response.data.page);
@@ -50,7 +50,7 @@ const KataSifat = () => {
     // },[]);
 
     // const getKataSifat =  async() => {
-    //     const response = await axios.get('http://localhost:5000/getkatasifat');
+    //     const response = await axios.get('http://localhost:49153/getkatasifat');
     //     setKataSifat(response.data)
     // }
   return (

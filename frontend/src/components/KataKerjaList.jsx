@@ -24,7 +24,7 @@ const KataKerjaList = () => {
 
     const getKataKerja =  async() => {
         const response = await axios.get(
-            `http://localhost:5000/katakerja?search_query=${keyword}&page=${page}&limit=${limit}`
+            `http://localhost:49153/katakerja?search_query=${keyword}&page=${page}&limit=${limit}`
         );
         setKataKerja(response.data.result);
         setPage(response.data.page);
@@ -43,7 +43,7 @@ const KataKerjaList = () => {
             confirmButtonText: 'Ya, Hapus!'
           }).then((result) => {
             if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/katakerja/${KataKerjaId}`);
+        axios.delete(`http://localhost:49153/katakerja/${KataKerjaId}`);
         MySwal.fire(
             'Dihapus!',
             'Data Berhasil dihapus!'

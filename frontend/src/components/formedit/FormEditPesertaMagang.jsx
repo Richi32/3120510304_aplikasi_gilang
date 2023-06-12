@@ -36,7 +36,7 @@ const FormEditPesertaMagang = () => {
     useEffect(()=>{
         const getPesertaMagangbyId = async() => {
             try {
-                const response = await axios.get(`http://localhost:5000/pesertamagang/${id}`);
+                const response = await axios.get(`http://localhost:49153/pesertamagang/${id}`);
                 setNama(response.data.nama)
                 setTempatLahir(response.data.tempatlahir);
                 setTglLahir(response.data.tgllahir);
@@ -63,7 +63,7 @@ const FormEditPesertaMagang = () => {
     const updatePesertaMagang = async(e) => {
         e.preventDefault();
         try {
-            await axios.patch(`http://localhost:5000/pesertamagang/${id}`,{
+            await axios.patch(`http://localhost:49153/pesertamagang/${id}`,{
                 nama:  nama,
                 tempatlahir: tempatlahir,
                 tgllahir: tgllahir,

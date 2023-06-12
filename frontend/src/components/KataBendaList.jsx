@@ -24,7 +24,7 @@ const KataBendaList = () => {
 
     const getKataBenda =  async() => {
         const response = await axios.get(
-            `http://localhost:5000/katabenda?search_query=${keyword}&page=${page}&limit=${limit}`
+            `http://localhost:49153/katabenda?search_query=${keyword}&page=${page}&limit=${limit}`
         );
         setKataBenda(response.data.result);
         setPage(response.data.page);
@@ -43,7 +43,7 @@ const KataBendaList = () => {
             confirmButtonText: 'Ya, Hapus!'
           }).then((result) => {
             if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/katabenda/${KataBendaId}`);
+        axios.delete(`http://localhost:49153/katabenda/${KataBendaId}`);
         MySwal.fire(
             'Dihapus!',
             'Data Berhasil dihapus!'

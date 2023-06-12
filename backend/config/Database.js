@@ -1,8 +1,8 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize('yukimaga_db','root','richism32',{
-    host: "db",
-    port: 49154,    
+const db = new Sequelize('yukimaga_db','userku','passku',{
+    host: "maria-db-nya",
+    port: 3306,    
     dialect: "mysql"
 });
 

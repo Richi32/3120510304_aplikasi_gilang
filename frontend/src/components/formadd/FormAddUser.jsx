@@ -42,7 +42,7 @@ const FormAddUser = () => {
                 confirmButtonText: 'Simpan',
               }).then((result) => {
             if (result.isConfirmed) {
-                axios.post('http://localhost:5000/users',{
+                axios.post('http://localhost:49153/users',{
                     nama:  nama,
                     tempatlahir: tempatlahir,
                     tgllahir: tgllahir,

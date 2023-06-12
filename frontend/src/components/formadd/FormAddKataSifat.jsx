@@ -22,7 +22,7 @@ const FormAddKataSifat = () => {
                 confirmButtonText: 'Simpan',
               }).then((result) => {
                 if (result.isConfirmed) {
-                axios.post('http://localhost:5000/katasifat',{
+                axios.post('http://localhost:49153/katasifat',{
                 kanji: kanji,
                 romaji: romaji,
                 arti: arti

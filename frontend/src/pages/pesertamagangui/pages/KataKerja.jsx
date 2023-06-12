@@ -19,7 +19,7 @@ const KataKerja = () => {
  
   const getKataKerja = async () => {
     const response = await axios.get(
-      `http://localhost:5000/getkataKerja?search_query=${keyword}&page=${page}&limit=${limit}`
+      `http://localhost:49153/getkataKerja?search_query=${keyword}&page=${page}&limit=${limit}`
     );
     setKataKerja(response.data.result);
     setPage(response.data.page);
@@ -49,7 +49,7 @@ const KataKerja = () => {
     // },[]);
 
     // const getKataKerja =  async() => {
-    //     const response = await axios.get('http://localhost:5000/getkatakerja');
+    //     const response = await axios.get('http://localhost:49153/getkatakerja');
     //     setKataKerja(response.data)
     // }
 

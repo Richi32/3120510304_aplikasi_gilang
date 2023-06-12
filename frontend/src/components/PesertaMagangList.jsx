@@ -14,7 +14,7 @@ const PesertaMagangList = () => {
     },[]);
 
     const getPesertaMagang = async() => {
-        const response = await axios.get('http://localhost:5000/pesertamagang');
+        const response = await axios.get('http://localhost:49153/pesertamagang');
         setPesertaMagang(response.data)
     }
 
@@ -29,7 +29,7 @@ const PesertaMagangList = () => {
             confirmButtonText: 'Ya, Hapus!'
           }).then((result) => {
         if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/pesertamagang/${pesertamagangId}`);
+        axios.delete(`http://localhost:49153/pesertamagang/${pesertamagangId}`);
         MySwal.fire(
             'Dihapus!',
             'Data Berhasil dihapus!'

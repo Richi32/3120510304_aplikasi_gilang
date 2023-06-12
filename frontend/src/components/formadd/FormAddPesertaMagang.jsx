@@ -43,7 +43,7 @@ const FormAddPesertaMagang = () => {
                 confirmButtonText: 'Simpan',
               }).then((result) => {
             if (result.isConfirmed) {
-                axios.post('http://localhost:5000/pesertamagang',{
+                axios.post('http://localhost:49153/pesertamagang',{
                     nama:  nama,
                     tempatlahir: tempatlahir,
                     tgllahir: tgllahir,

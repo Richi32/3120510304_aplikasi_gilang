@@ -14,7 +14,7 @@ const HirakataList = () => {
     },[]);
 
     const getHirakata = async() => {
-        const response = await axios.get('http://localhost:5000/hirakata');
+        const response = await axios.get('http://localhost:49153/hirakata');
         setHirakata(response.data)
     }
 
@@ -29,7 +29,7 @@ const HirakataList = () => {
             confirmButtonText: 'Ya, Hapus!'
           }).then((result) => {
             if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/hirakata/${HirakataId}`);
+        axios.delete(`http://localhost:49153/hirakata/${HirakataId}`);
         MySwal.fire(
             'Dihapus!',
             'Data Berhasil dihapus!'

@@ -21,7 +21,7 @@ const FormAddHirakata = () => {
                 confirmButtonText: 'Simpan',
               }).then((result) => {
                 if (result.isConfirmed) {
-                axios.post('http://localhost:5000/hirakata',{
+                axios.post('http://localhost:49153/hirakata',{
                 hiragana: hiragana,
                 katakana: katakana,
                 romaji: romaji

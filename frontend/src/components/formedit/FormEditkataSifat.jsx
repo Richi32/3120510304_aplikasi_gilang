@@ -13,7 +13,7 @@ const FormEditkataSifat = () => {
     useEffect(()=>{
         const getKataSifatById = async() => {
             try {
-                const response = await axios.get(`http://localhost:5000/KataSifat/${id}`);
+                const response = await axios.get(`http://localhost:49153/KataSifat/${id}`);
                 setKanji(response.data.kanji)
                 setRomaji(response.data.romaji);
                 setArti(response.data.arti);
@@ -29,7 +29,7 @@ const FormEditkataSifat = () => {
     const updateKataSifat = async(e) => {
         e.preventDefault();
         try {
-            await axios.patch(`http://localhost:5000/KataSifat/${id}`,{
+            await axios.patch(`http://localhost:49153/KataSifat/${id}`,{
                 kanji: kanji,
                 romaji:  romaji,
                 arti: arti

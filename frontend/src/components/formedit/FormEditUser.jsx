@@ -36,7 +36,7 @@ const FormEditUser = () => {
     useEffect(()=>{
         const getUserbyId = async() => {
             try {
-                const response = await axios.get(`http://localhost:5000/users/${id}`);
+                const response = await axios.get(`http://localhost:49153/users/${id}`);
                 setNama(response.data.nama)
                 setTempatLahir(response.data.tempatlahir);
                 setTglLahir(response.data.tgllahir);
@@ -63,7 +63,7 @@ const FormEditUser = () => {
     const updateUser = async(e) => {
         e.preventDefault();
         try {
-            await axios.patch(`http://localhost:5000/users/${id}`,{
+            await axios.patch(`http://localhost:49153/users/${id}`,{
                 nama:  nama,
                 tempatlahir: tempatlahir,
                 tgllahir: tgllahir,

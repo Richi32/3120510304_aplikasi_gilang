@@ -19,7 +19,7 @@ const Kanjin5 = () => {
  
   const getKanjin5 = async () => {
     const response = await axios.get(
-      `http://localhost:5000/getkanjin5?search_query=${keyword}&page=${page}&limit=${limit}`
+      `http://localhost:49153/getkanjin5?search_query=${keyword}&page=${page}&limit=${limit}`
     );
     setKanjin5(response.data.result);
     setPage(response.data.page);
@@ -51,7 +51,7 @@ const Kanjin5 = () => {
     // },[]);
 
     // const getKanjin5 = async() => {
-    //     const response = await axios.get('http://localhost:5000/getkanjin5');
+    //     const response = await axios.get('http://localhost:49153/getkanjin5');
     //     setKanjin5(response.data)
     // }
 
